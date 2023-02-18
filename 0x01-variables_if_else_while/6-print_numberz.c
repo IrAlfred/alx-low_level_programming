@@ -10,7 +10,7 @@ int main(void)
 	int ch;
 
 	i = 0;
-	ch = 0;
+	ch = 48;
 	while (i < 10)
 	{
 		putchar((char)ch++);
