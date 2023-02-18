@@ -13,7 +13,7 @@ int main(void)
 	while (ch1 <= '9')
 	{
 		ch2 = ch1 + 1;
-		while (ch2 <= 9)
+		while (ch2 <= '9')
 		{
 			putchar(ch1);
 			putchar(ch2);
