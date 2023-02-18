@@ -11,7 +11,7 @@ int main(void)
 
 	c = 'a';
 	i = 0;
-	while(i < 26)
+	while (i < 26)
 	{
 		putchar(c++);
 		i = i + 1;
