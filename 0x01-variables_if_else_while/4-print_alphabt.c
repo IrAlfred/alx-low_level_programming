@@ -15,9 +15,10 @@ int main(void)
 	{
 		if (c != 'q' && c != 'e')
 		{
-			putchar(c++);
+			putchar(c);
 		}
 		i = i + 1;
+		c++;
 	}
 	putchar('\n');
 	return (0);
