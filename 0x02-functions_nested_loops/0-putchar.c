@@ -10,7 +10,7 @@ void _putchar(void)
 	char ch[8];
 	int i;
 
-	ch = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\0'};
+	ch[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\0'};
 	for(i = 0; i < 8; i++)
 	{
 		putchar(ch[i]);
