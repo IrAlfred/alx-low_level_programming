@@ -7,14 +7,15 @@
  */
 void _putchar(void)
 {
-	char ch[8];
-	int i;
-
-	ch = "_putchar";
-	for(i = 0; i < 8; i++)
-	{
-		putchar(ch[i]);
-	}
+	putchar(95);
+	putchar(112);
+	putchar(117);
+	putchar(116);
+	putchar(99);
+	putchar(104);
+	putchar(97);
+	putchar(114);
+	putchar('\n');
 }
 
 /**
