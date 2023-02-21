@@ -1,8 +1,9 @@
+#include <unistd.h>
 /**
  * _putchar - Prints a character passed in argument
- * Return: void
+ * Return:1 (success)
  */
-void _putchar(char c)
+int _putchar(char c)
 {
-	putchar(c);
+	return (write(1, &c, 1));
 }
