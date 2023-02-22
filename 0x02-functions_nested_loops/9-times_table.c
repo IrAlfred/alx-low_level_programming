@@ -10,6 +10,7 @@ void times_table(void)
 	int i = 0;
 	int j = 1;
 	int num = 0;
+
 	while (i <= 9)
 	{
 		putchar('0');
