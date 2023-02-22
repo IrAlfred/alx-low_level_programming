@@ -10,10 +10,10 @@ void print_alphabet_x10(void)
 	char ch;
 	int i;
 
-	ch = 'a';
 	i = 0;
 	while (i < 10)
 	{
+		ch = 'a';
 		while (ch <= 'z')
 		{
 			putchar(ch++);
