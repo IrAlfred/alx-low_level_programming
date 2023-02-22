@@ -5,7 +5,7 @@
  * print_alphabet - print low case alphabet 10 times
  * Return: void
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char ch;
 	int i;
