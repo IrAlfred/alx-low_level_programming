@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_alphabet: print low case alphabet
+ * print_alphabet - print low case alphabet
  * Return: void
  */
 void print_alphabet(void)
