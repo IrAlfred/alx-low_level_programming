@@ -37,7 +37,7 @@ void print_column(int i, int j, int num, int tmp, int n)
 		if (j != n)
 		{
 			putchar(',');
-			putcahr(' ');
+			putchar(' ');
 		}
 		j++;
 	}
