@@ -6,12 +6,13 @@
  */
 int main(void)
 {
-	int one = 1;
-	int two = 2;
+	unsigned long one = 1;
+	unsigned long two = 2;
 	int i = 0;
 	
 	while (i < 50)
 	{
+		printf("%lu", one);
 		if (i < 49)
 		{
 			two += one;
