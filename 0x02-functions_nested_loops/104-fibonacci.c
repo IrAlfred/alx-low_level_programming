@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 98 Fibonacci numbers, starting
- * 	with 1 and 2
+ * main - Prints the first 98 Fibonacci
  * Return: 0 (success)
  */
 int main(void)
