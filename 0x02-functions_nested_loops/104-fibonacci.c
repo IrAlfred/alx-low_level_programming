@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int counnt;
+	int count;
 	unsigned long fib1 = 0, fib2 = 1, sum;
 	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
 	unsigned long falf1, half2;
