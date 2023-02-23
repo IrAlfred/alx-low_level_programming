@@ -19,3 +19,13 @@ void sum(void)
 	}
 	printf("%d\n", sum);
 }
+
+/**
+ * main - prints the sum
+ * Return: always 0 (success)
+ */
+int main(void)
+{
+	sum();
+	return (0);
+}
