@@ -16,6 +16,7 @@ void sum(void)
 		{
 			sum += i;
 		}
+		i++;
 	}
 	printf("%d\n", sum);
 }
