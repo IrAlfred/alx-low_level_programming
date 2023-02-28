@@ -8,7 +8,7 @@
  */
 void rev_string(char *s)
 {
-	int length = get_length(s);
+	const int length = get_length(s);
 	int i = 0;
 	char tmp[length];
 
