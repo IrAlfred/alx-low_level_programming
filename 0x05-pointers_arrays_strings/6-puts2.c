@@ -2,7 +2,7 @@
 
 /**
  * puts2 - Prints the odd character of a string
- * @s: string input
+ * @str: string input
  * Return: void
  */
 void puts2(char *str)
