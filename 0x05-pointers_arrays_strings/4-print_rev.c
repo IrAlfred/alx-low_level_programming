@@ -16,3 +16,19 @@ void print_rev(char *s)
 	}
 	_putchar('\n');
 }
+
+/**
+ * _strlen - gets the length of the string
+ * @s: pointer string
+ * Return: int (length)
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+	
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
