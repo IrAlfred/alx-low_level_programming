@@ -8,27 +8,21 @@
  */
 void rev_string(char *s)
 {
-	const int length = get_length(s);
+	int length = 0;
 	int i = 0;
-	char tmp[length];
+	char tmp;
 
-	tmp[length - 1] = '\0';
-	while (s[i] != '\0')
+	while (*(s + length) != 0)
 	{
-		tmp[length - (i + 1)] = s[i];
+		length++;
+	}
+
+	while (length >= i)
+	{
+		tmp = *(s + length);
+		*(s + length) = *(s + i);
+		*(s + i) = tmp;
 		i++;
 	}
-	strcpy(*s, *tmp);
 
 }
-
-int get_length(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}	
