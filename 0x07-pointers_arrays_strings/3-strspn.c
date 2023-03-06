@@ -17,6 +17,7 @@ unsigned int _strspn(char *s, char *accept)
 	while (*(s + i) != '\0')
 	{
 		found = 0;
+		j = 0;
 		while (*(accept + j) != '\0')
 		{
 			if (*(accept + j) == *(s + i))
@@ -30,7 +31,11 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			break;
 		}
+		else
+		{
+			length++;
+		}
 		i++;
 	}
-	return (i);
+	return (length);
 }
