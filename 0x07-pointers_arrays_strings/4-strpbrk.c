@@ -28,5 +28,12 @@ char *_strpbrk(char *s, char *accept)
 			break;
 		}
 	}
-	return (&s[i]);
+	if (found = 1)
+	{
+		return (&s[i]);
+	}
+	else
+	{
+		return (NULL);
+	}
 }
