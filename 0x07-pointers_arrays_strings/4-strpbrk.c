@@ -28,7 +28,7 @@ char *_strpbrk(char *s, char *accept)
 			break;
 		}
 	}
-	if (found = 1)
+	if (found == 1)
 	{
 		return (&s[i]);
 	}
