@@ -28,9 +28,8 @@ int main(int argc, char *argv[])
 		}
 		if (amount >= 10)
 		{
-			tmp = amount / 10;
-			nbCoins += tmp;
-			amount -= tmp * 10;
+			nbCoins += amount / 10;
+			amount -= (amount / 10) * 10;
 		}
 		if (amount >= 5)
 		{
@@ -48,6 +47,5 @@ int main(int argc, char *argv[])
 			nbCoins++;
 		printf("%d\n", nbCoins);
 	}
-
 	return (0);
 }
