@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int _putchar(char c);
-int _islower(char c);
+int _islower(int c);
 int _isaplpha(int c);
 int _abs(int n);
 int _isupper(int c);

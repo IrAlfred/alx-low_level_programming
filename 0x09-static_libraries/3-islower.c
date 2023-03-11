@@ -6,7 +6,7 @@
  * @c : is the character passed to the function
  * Return: 1 (character is lowercase) and 0 otherwise
  */
-int _islower(char c)
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
