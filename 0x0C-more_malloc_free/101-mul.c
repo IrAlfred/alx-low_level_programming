@@ -49,6 +49,24 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	return (ptr);
 }
 
+/**
+ * _length - Gets the length of a string
+ * @s: string
+ *
+ * Return: length of string
+ */
+int _length(char *s)
+{
+	int i = 0;
+
+	if (s == NULL)
+		return (0);
+
+	while (*(s + i) != '\0')
+		i++;
+	return (i);
+}
+
 
 /**
  * multiply - initialize array with 0 byte
