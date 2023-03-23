@@ -9,41 +9,44 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list my_params;
-	int i = 0, p_ok = 0;
-	char *s;
+	va_list valist;
+	unsigned int i = 0, j, c = 0;
+	char *str;
+	const char t_arg[] = "cifs";
 
-	va_start(my_params, format);
-	while (format[i] != '\0')
+	va_start(valist, format);
+	while (format && format[i])
 	{
+		j = 0;
+		while (t_arg[j])
+		{
+			if (format[i] == t_arg[j] && c)
+			{
+				printf(", ");
+				break;
+			} j++;
+		}
 		switch (format[i])
 		{
-			case 'c':
-				printf("%c", (char)va_arg(my_params, int));
-				p_ok = 1;
+		case 'c':
+			printf("%c", va_arg(valist, int)), c = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(valist, int)), c = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(valist, double)), c = 1;
+			break;
+		case 's':
+			str = va_arg(valist, char *), c = 1;
+			if (!str)
+			{
+				printf("(nil)");
 				break;
-			case 'i':
-				printf("%i", va_arg(my_params, int));
-				p_ok = 1;
-				break;
-			case 'f':
-				printf("%f", (float)va_arg(my_params, double));
-				p_ok = 1;
-				break;
-			case 's':
-				s = va_arg(my_params, char*);
-				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s", s);
-				p_ok = 1;
-				break;
-		}
-		if (format[i + 1] != '\0' && p_ok == 1)
-			printf(", ");
-		p_ok = 0;
-		i++;
+			}
+			printf("%s", str);
+			break;
+		} i++;
 	}
-	printf("\n");
-	va_end(my_params);
+	printf("\n"), va_end(valist);
 }
