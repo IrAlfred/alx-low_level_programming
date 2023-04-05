@@ -2,7 +2,7 @@
 
 /**
  * bmain - function executed before main function
- * 
+ *
  * Return: nothing
  */
 
