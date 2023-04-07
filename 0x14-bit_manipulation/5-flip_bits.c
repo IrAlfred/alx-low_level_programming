@@ -10,13 +10,19 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int i = 0;
-	int j;
+	/* int j; */
 	unsigned long int resXOR = n ^ m;
 
+	while (resXOR)
+	{
+		i += resXOR & 1;
+		resXOR >>= 1;
+	}
+/*
 	for (j = 31; j >= 0; j--)
 	{
 		if (resXOR & (1 << j))
 			i++;
-	}
+	}*/
 	return (i);
 }
