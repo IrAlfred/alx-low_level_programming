@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int j;
 	unsigned int resXOR = n ^ m;
 
-	for (j = 31; j >= 0; j--)
+	for (j = sizeof(resXOR) * 8 - 1; j >= 0; j--)
 	{
 		if (resXOR & (1 << j))
 			i++;
