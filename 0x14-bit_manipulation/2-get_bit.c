@@ -10,6 +10,7 @@ unsigned long int get_max(int n)
 {
 	int i;
 	unsigned long int max = 1;
+
 	for (i = 0; i < n; i++)
 	{
 		max *= 2;
