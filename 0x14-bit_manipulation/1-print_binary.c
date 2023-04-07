@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	int i;
 	bool started = false;
 
-	for (i = 31; i >= 0; i--)
+	for (i = sizeof(n) * 8 - 1; i >= 0; i--)
 	{
 		if (1 & (n >> i))
 		{
