@@ -25,7 +25,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			return (-1);
 	}
 
-	while (text_content[nbLetters])			
+	while (text_content[nbLetters])
 		nbLetters++;
 	if (write(fd, text_content, nbLetters) == -1)
 		return (-1);
