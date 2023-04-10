@@ -126,3 +126,15 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_type);
 	}
 }
+
+/**
+ * print_abi - Prints the ABI version of the ELF header
+ * @e_ident: A pointer to an array of the ELF ABI version
+ *
+ * Return: nothing
+ */
+void print_abi(unsigned char *e_ident)
+{
+	printf("  ABI Version:                       %d\n",
+	       e_ident[EI_ABIVERSION]);
+}
