@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <elf.h>
-#include <fcntl.h>
-#include <unistd.h>
+#include "my_elf.h"
 
 /**
  * main - Entry point of program
@@ -11,7 +7,7 @@
  *
  * Return: int (0 success)
  */
-int main(int argc, **argv)
+int main(int __attribute__((__unused__)) argc, **argv)
 {
-
+	
 }
