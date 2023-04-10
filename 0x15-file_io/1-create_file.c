@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	wrCount = write(fd, text_content, sizeof(text_content));
 	
-	if(wrCount != sizeof(text_content))
+	if(wrCount == -1)
 		return (-1);
 
 	close(fd);
