@@ -10,18 +10,23 @@
  */
 int main(int argc, char **argv)
 {
-	int file1, file2, nbChars;
+	int file_from, file_to, nbChars;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
+		dprintf(stderr, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	file1 = open(argv[1], O_RDONLY);
-	if (file1 == -1)
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
 	{
-		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+
+	file_to = open(argv[1], O_WRONLY);
+
+
 	return (0);
 }
