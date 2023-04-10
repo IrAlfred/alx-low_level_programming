@@ -27,7 +27,7 @@ void print_entry_addr(unsigned long int e_entry, unsigned char *e_ident)
 
 /**
  * close_elf - Closes ELF file
- * @elf: file descriptor of the ELF file
+ * @elf_fd: file descriptor of the ELF file
  *
  * Return: void
  */
