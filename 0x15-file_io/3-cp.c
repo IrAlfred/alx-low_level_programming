@@ -10,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	int file_from, file_to, nbChars;
+	int file_from, file_to, nbChars, nbWr;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -25,12 +25,12 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	file_to = open(argv[2], O_WRONLY);
+	file_to = open(argv[2], O_WRONLY | O_TRUNC);
 	if (file_to == -1)
-		file_to = open(argv[2], O_WRONLY | O_CREAT, 0664);
-	while (read(file_from, buffer, 1024) > 0)
+		file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	while (nbWr = read(file_from, buffer, 1024) > 0)
 	{
-		if (write(file_to, buffer, (1024 / sizeof(char))) == -1)
+		if (write(file_to, buffer, nbWr) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 			exit(99);
