@@ -1,13 +1,13 @@
 #include "my_elf.h"
 
 /**
- * print_entry - Prints the entry point of an ELF header
+ * print_entry_addr - Prints the entry point of an ELF header
  * @e_entry: address of the ELF entry point
  * @e_ident: A pointer to the array containing the ELF class
  *
  * Return: nothing
  */
-void print_entry(unsigned long int e_entry, unsigned char *e_ident)
+void print_entry_addr(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
 
@@ -82,9 +82,9 @@ int main(int __attribute__((__unused__)) argc, **argv)
 	print_data(header->e_ident);
 	print_version(header->e_ident);
 	print_osabi(header->e_ident);
-	print_abi(header->e_ident);
+	print_abi_version(header->e_ident);
 	print_type(header->e_type, header->e_ident);
-	print_entry(header->e_entry, header->e_ident);
+	print_entry_addr(header->e_entry, header->e_ident);
 
 	free(header);
 	close_elf(info);
@@ -128,12 +128,12 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 }
 
 /**
- * print_abi - Prints the ABI version of the ELF header
+ * print_abi_version - Prints the ABI version of the ELF header
  * @e_ident: A pointer to an array of the ELF ABI version
  *
  * Return: nothing
  */
-void print_abi(unsigned char *e_ident)
+void print_abi_version(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
 	       e_ident[EI_ABIVERSION]);
