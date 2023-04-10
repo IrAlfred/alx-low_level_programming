@@ -29,8 +29,14 @@ int main(int argc, char **argv)
 	file_to = open(argv[2], O_WRONLY | O_TRUNC);
 	if (file_to == -1)
 		file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	while ((nbCharsRead = read(file_from, buffer, 1024)))
+	while (nbCharsRead)
 	{
+		nbCharsRead = read(file_from, buffer, 1024);
+		if (nbCharsRead == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+			exit(98);
+		}
 		if (write(file_to, buffer, nbCharsRead) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
